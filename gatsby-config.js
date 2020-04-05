@@ -33,11 +33,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Josh Pullen`,
+        short_name: `Josh Pullen`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#4c51bf`,
         display: `minimal-ui`,
         icon: `src/images/josh-pullen-logo.webp` // This path is relative to the root of the site.
       }

@@ -19,7 +19,7 @@ export function Layout({ children }) {
   return (
     <div className="flex flex-col items-stretch min-h-screen">
       <div
-        className="sticky top-0 bg-white select-none"
+        className="sticky top-0 z-20 bg-white select-none"
         style={{
           backdropFilter: "blur(8px)",
           background: "rgba(255, 255, 255, 0.9)"
@@ -29,21 +29,21 @@ export function Layout({ children }) {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
               <img src={logo} className="w-12 my-4 mr-4 rounded-full" />
-              <h1 className="text-xl font-semibold leading-none">
+              <h1 className="hidden text-xl font-semibold leading-none sm:block">
                 {data.site.siteMetadata.title}
               </h1>
             </Link>
             <nav className="text-gray-800">
               <Link
                 to="/"
-                className="px-4 py-2 ml-2 rounded-md hover:bg-gray-300"
+                className="inline-block px-4 py-2 ml-2 rounded-md hover:bg-gray-300"
                 activeClassName="bg-gray-800 text-white hover:bg-gray-800"
               >
                 Start here
               </Link>
               <Link
                 to="/blog"
-                className="px-4 py-2 ml-2 rounded-md hover:bg-gray-300"
+                className="inline-block px-4 py-2 ml-2 rounded-md hover:bg-gray-300"
                 activeClassName="bg-gray-800 text-white hover:bg-gray-800"
                 partiallyActive={true}
               >
@@ -59,7 +59,7 @@ export function Layout({ children }) {
       <footer className="py-8 mt-auto bg-gray-100 select-none">
         <div className="flex max-w-2xl px-8 mx-auto">
           <span>© {new Date().getFullYear()} Josh Pullen</span>
-          <div className="flex ml-auto">
+          <div className="flex flex-col ml-auto sm:flex-row">
             <a
               href="https://github.com/PullJosh/"
               className="flex items-center ml-4 text-gray-600 hover:text-gray-700"
