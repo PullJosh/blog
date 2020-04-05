@@ -42,6 +42,13 @@ module.exports = {
         icon: `src/images/josh-pullen-logo.webp` // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-postcss`
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-59004745-3`,
+        head: false
+      }
+    }
   ]
 };
