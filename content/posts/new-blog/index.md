@@ -1,6 +1,6 @@
 ---
 slug: new-blog
-date: 2020-04-01 12:00:00
+date: 2020-04-04 12:00:00
 title: "New blog!"
 published: true
 author: "Josh Pullen"
