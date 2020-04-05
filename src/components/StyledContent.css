@@ -1,0 +1,54 @@
+.StyledContent {
+  @apply text-lg;
+  @apply leading-7;
+  @apply text-justify;
+}
+.StyledContent p {
+  @apply m-0;
+}
+.StyledContent p:not(:last-child) {
+  @apply mb-4;
+}
+.StyledContent a {
+  @apply text-indigo-600;
+}
+.StyledContent a:hover {
+  @apply text-indigo-800;
+}
+.StyledContent h3 {
+  @apply text-3xl;
+  @apply font-semibold;
+  @apply mb-3;
+}
+.StyledContent h4 {
+  @apply text-2xl;
+  @apply font-semibold;
+  @apply mb-2;
+}
+.StyledContent h5 {
+  @apply text-xl;
+  @apply font-semibold;
+  @apply mb-1;
+}
+.StyledContent h6 {
+  @apply text-lg;
+  @apply font-semibold;
+}
+.StyledContent blockquote {
+  @apply border-l-4;
+  @apply border-gray-900;
+  @apply pl-4;
+  @apply py-2;
+  @apply mb-4;
+}
+.StyledContent .prism-code {
+  @apply py-3;
+  @apply rounded;
+  @apply mb-4;
+}
+.StyledContent .prism-code > * {
+  @apply px-4;
+}
+.StyledContent .prism-code > .prism-line-highlighted {
+  @apply bg-indigo-900;
+}
