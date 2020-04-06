@@ -11,9 +11,9 @@ export default function PostsList({ data }) {
       <SEO title="Blog" description="Thoughts on education and technology." />
       {data.allMdx.edges.map(({ node }) => {
         return (
-          <a
+          <Link
             className="block px-5 py-4 mb-8 -mx-5 -my-4 rounded-lg hover:bg-gray-200"
-            href={`/blog/posts/${node.frontmatter.slug}`}
+            to={`/blog/posts/${node.frontmatter.slug}/`}
           >
             <time
               className="text-gray-700"
@@ -25,7 +25,7 @@ export default function PostsList({ data }) {
               {node.frontmatter.title}
             </h2>
             <StyledContent>{node.excerpt}</StyledContent>
-          </a>
+          </Link>
         );
       })}
       <div className="flex items-center ContentArea">
@@ -35,7 +35,7 @@ export default function PostsList({ data }) {
               to={
                 data.allMdx.pageInfo.currentPage - 1 === 1
                   ? `/blog/`
-                  : `/blog/page/${data.allMdx.pageInfo.currentPage - 1}`
+                  : `/blog/page/${data.allMdx.pageInfo.currentPage - 1}/`
               }
             >
               ← Newer posts
@@ -48,7 +48,7 @@ export default function PostsList({ data }) {
         </span>
         <span className="w-1/3 text-right">
           {data.allMdx.pageInfo.hasNextPage && (
-            <Link to={`/blog/page/${data.allMdx.pageInfo.currentPage + 1}`}>
+            <Link to={`/blog/page/${data.allMdx.pageInfo.currentPage + 1}/`}>
               Older posts →
             </Link>
           )}

@@ -42,7 +42,7 @@ export function Layout({ children }) {
                 Start here
               </Link>
               <Link
-                to="/blog"
+                to="/blog/"
                 className="inline-block px-4 py-2 ml-2 rounded-md hover:bg-gray-300"
                 activeClassName="bg-gray-800 text-white hover:bg-gray-800"
                 partiallyActive={true}
