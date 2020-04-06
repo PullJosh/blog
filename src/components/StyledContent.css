@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 .StyledContent {
   @apply text-lg;
   @apply leading-7;
@@ -52,3 +54,5 @@
 .StyledContent .prism-code > .prism-line-highlighted {
   @apply bg-indigo-900;
 }
+
+/* purgecss end ignore */
