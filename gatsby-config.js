@@ -49,6 +49,7 @@ module.exports = {
         trackingId: `UA-59004745-3`,
         head: false
       }
-    }
+    },
+    `gatsby-plugin-force-trailing-slashes`
   ]
 };
