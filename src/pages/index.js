@@ -24,7 +24,11 @@ export default function Index() {
       <StyledContent className="text-lg leading-7">
         <p>
           When I was 8 years old, I started programming with{" "}
-          <a href="https://scratch.mit.edu/users/PullJosh/" target="_blank">
+          <a
+            href="https://scratch.mit.edu/users/PullJosh/"
+            target="_blank"
+            rel="noopener"
+          >
             Scratch
           </a>
           . Ever since that magical moment, I've been fascinated by the
@@ -34,9 +38,10 @@ export default function Index() {
         <div className="px-8 w-break-free">
           <div className="flex items-center max-w-3xl mx-auto my-8">
             <a
+              className="w-2/5 p-2 pb-0 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
               href="http://thirdgrademathgames.com/"
               target="_blank"
-              className="w-2/5 p-2 pb-0 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
+              rel="noopener"
             >
               <img
                 src={thirdgrademathgames}
@@ -48,9 +53,10 @@ export default function Index() {
               </div>
             </a>
             <a
+              className="z-10 w-3/5 p-3 pb-0 -mx-2 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
               href="https://www.rocketspelling.com/"
               target="_blank"
-              className="z-10 w-3/5 p-3 pb-0 -mx-2 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
+              rel="noopener"
             >
               <img
                 src={rocketspelling}
@@ -62,9 +68,10 @@ export default function Index() {
               </div>
             </a>
             <a
+              className="w-2/5 p-2 pb-0 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
               href="https://onlinemathleague.com/"
               target="_blank"
-              className="w-2/5 p-2 pb-0 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
+              rel="noopener"
             >
               <img
                 src={onlinemathleague}

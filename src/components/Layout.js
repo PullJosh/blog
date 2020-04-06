@@ -28,7 +28,7 @@ export function Layout({ children }) {
         <header className="max-w-2xl px-8 mx-auto">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
-              <img src={logo} className="w-12 my-4 mr-4 rounded-full" />
+              <img src={logo} alt="" className="w-12 my-4 mr-4 rounded-full" />
               <h1 className="hidden text-xl font-semibold leading-none sm:block">
                 {data.site.siteMetadata.title}
               </h1>
@@ -61,9 +61,10 @@ export function Layout({ children }) {
           <span>© {new Date().getFullYear()} Josh Pullen</span>
           <div className="flex flex-col ml-auto sm:flex-row">
             <a
+              className="flex items-center ml-4 text-gray-700 hover:text-indigo-700"
               href="https://github.com/PullJosh/"
-              className="flex items-center ml-4 text-gray-600 hover:text-gray-700"
               target="_blank"
+              rel="noreferrer"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 7.408 7.408">
                 <path
@@ -74,9 +75,10 @@ export function Layout({ children }) {
               <span>Github</span>
             </a>
             <a
+              className="flex items-center ml-4 text-gray-700 hover:text-indigo-700"
               href="https://twitter.com/PullJosh/"
-              className="flex items-center ml-4 text-gray-600 hover:text-gray-700"
               target="_blank"
+              rel="noreferrer"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 28 28">
                 <path
@@ -87,9 +89,10 @@ export function Layout({ children }) {
               <span>Twitter</span>
             </a>
             <a
+              className="flex items-center ml-4 text-gray-700 hover:text-indigo-700"
               href="https://www.youtube.com/c/PullJosh/"
-              className="flex items-center ml-4 text-gray-600 hover:text-gray-700"
               target="_blank"
+              rel="noreferrer"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 28 28">
                 <path
