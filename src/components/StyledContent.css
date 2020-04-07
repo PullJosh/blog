@@ -3,7 +3,6 @@
 .StyledContent {
   @apply text-lg;
   @apply leading-7;
-  @apply text-justify;
 }
 .StyledContent p {
   @apply m-0;
