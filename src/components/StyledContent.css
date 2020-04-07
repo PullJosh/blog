@@ -8,7 +8,8 @@
 .StyledContent p {
   @apply m-0;
 }
-.StyledContent p:not(:last-child) {
+.StyledContent p:not(:last-child),
+.StyledContent ul:not(:last-child) {
   @apply mb-4;
 }
 .StyledContent a {
@@ -35,6 +36,13 @@
 .StyledContent h6 {
   @apply text-lg;
   @apply font-semibold;
+}
+.StyledContent ul {
+  @apply list-disc;
+  @apply pl-8;
+}
+.StyledContent li:not(:last-child) {
+  @apply mb-2;
 }
 .StyledContent blockquote {
   @apply border-l-4;
