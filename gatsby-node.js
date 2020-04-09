@@ -16,12 +16,20 @@ exports.createPages = async function({ actions, graphql }) {
   const posts = data.allMdx.edges;
 
   // Individual posts
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node }, index) => {
     const slug = node.frontmatter.slug;
     actions.createPage({
       path: `/blog/posts/${slug}`,
       component: require.resolve("./src/templates/blog-post.js"),
-      context: { slug }
+      context: {
+        slug,
+        prevSlug: posts[index + 1]
+          ? posts[index + 1].node.frontmatter.slug
+          : null,
+        nextSlug: posts[index - 1]
+          ? posts[index - 1].node.frontmatter.slug
+          : null
+      }
     });
   });
 

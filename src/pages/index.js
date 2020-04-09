@@ -89,16 +89,6 @@ export default function Index() {
           club for local elementary students.
         </p>
       </StyledContent>
-      <Link
-        to="/blog/"
-        className="block mt-16 overflow-hidden text-lg text-white bg-gray-800 rounded-lg shadow-xl"
-      >
-        <h5 className="p-4 font-bold bg-gray-900">Check out the blog! →</h5>
-        <p className="p-4 text-left">
-          Shoot me an email at <code>hello@joshuapullen.com</code> if you want
-          to subscribe. I'll be writing lots of fun stuff!
-        </p>
-      </Link>
     </Layout>
   );
 }
