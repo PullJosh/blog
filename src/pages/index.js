@@ -36,9 +36,9 @@ export default function Index() {
         </p>
         <p>After my time on Scratch, I created a few educational websites:</p>
         <div className="px-8 w-break-free">
-          <div className="flex items-center max-w-3xl mx-auto my-8">
+          <div className="flex flex-col items-center max-w-3xl mx-auto my-8 md:flex-row">
             <a
-              className="w-2/5 p-2 pb-0 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
+              className="max-w-sm p-2 pb-0 mb-4 transition duration-200 transform bg-white rounded-lg shadow-lg select-none md:w-2/5 hover:shadow-xl hover:-translate-y-1 md:mb-0"
               href="http://thirdgrademathgames.com/"
               target="_blank"
               rel="noopener"
@@ -46,14 +46,14 @@ export default function Index() {
               <img
                 src={thirdgrademathgames}
                 alt="Third Grade Math Games"
-                className="w-full h-auto rounded-l-sm shadow"
+                className="w-full h-auto rounded-sm shadow md:rounded-r-none"
               />
               <div className="my-2 text-base font-semibold text-center text-gray-900">
                 Third Grade Math Games
               </div>
             </a>
             <a
-              className="z-10 w-3/5 p-3 pb-0 -mx-2 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
+              className="z-10 max-w-sm p-3 pb-0 mb-4 -mx-2 transition duration-200 transform bg-white rounded-lg shadow-lg select-none md:mb-0 md:w-3/5 hover:shadow-xl hover:-translate-y-1"
               href="https://www.rocketspelling.com/"
               target="_blank"
               rel="noopener"
@@ -68,7 +68,7 @@ export default function Index() {
               </div>
             </a>
             <a
-              className="w-2/5 p-2 pb-0 transition duration-200 transform bg-white rounded-lg shadow-lg select-none hover:shadow-xl hover:-translate-y-1"
+              className="max-w-sm p-2 pb-0 transition duration-200 transform bg-white rounded-lg shadow-lg select-none md:w-2/5 hover:shadow-xl hover:-translate-y-1"
               href="https://onlinemathleague.com/"
               target="_blank"
               rel="noopener"
@@ -76,7 +76,7 @@ export default function Index() {
               <img
                 src={onlinemathleague}
                 alt="Online Math League"
-                className="w-full h-auto rounded-r-sm shadow"
+                className="w-full h-auto rounded-sm shadow md:rounded-l-none"
               />
               <div className="my-2 text-base font-semibold text-center text-gray-900">
                 Online Math League
