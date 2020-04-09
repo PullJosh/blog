@@ -71,14 +71,14 @@ export function Layout({ children }) {
               any time.
             </p>
             <form
-              className="flex bg-white rounded shadow"
+              className="flex flex-col max-w-full overflow-hidden bg-white rounded shadow sm:flex-row"
               action="https://app.convertkit.com/forms/1309362/subscriptions"
               method="post"
             >
               <input
                 type="email"
                 name="email_address"
-                className="flex-grow px-5 py-3 text-lg text-gray-900 bg-transparent"
+                className="flex-grow flex-shrink px-5 py-3 text-lg text-gray-900 bg-transparent"
                 placeholder="you@email.com"
                 autoComplete="on"
                 required
