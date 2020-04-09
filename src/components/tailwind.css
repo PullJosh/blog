@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+*::selection {
+  @apply bg-indigo-200;
+}
+
 .w-break-free {
   width: 100vw;
   position: relative;
