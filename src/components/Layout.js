@@ -75,9 +75,13 @@ export function Layout({ children }) {
               action="https://app.convertkit.com/forms/1309362/subscriptions"
               method="post"
             >
+              <label for="email_address" className="sr-only">
+                Email address:
+              </label>
               <input
                 type="email"
                 name="email_address"
+                id="email_address"
                 className="flex-grow flex-shrink px-5 py-3 text-lg text-gray-900 bg-transparent"
                 placeholder="you@email.com"
                 autoComplete="on"
