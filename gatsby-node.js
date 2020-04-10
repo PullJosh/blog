@@ -34,7 +34,7 @@ exports.createPages = async function({ actions, graphql }) {
   });
 
   // Posts list (pagination)
-  const postsPerPage = 10;
+  const postsPerPage = 5;
   const numPages = Math.ceil(posts.length / postsPerPage);
   for (let i = 0; i < numPages; i++) {
     actions.createPage({
