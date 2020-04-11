@@ -32,6 +32,7 @@ export default function PostsList({ data }) {
         <span className="w-1/3 text-left">
           {data.allMdx.pageInfo.hasPreviousPage && (
             <Link
+              className="text-indigo-700"
               to={
                 data.allMdx.pageInfo.currentPage - 1 === 1
                   ? `/blog/`
@@ -48,7 +49,10 @@ export default function PostsList({ data }) {
         </span>
         <span className="w-1/3 text-right">
           {data.allMdx.pageInfo.hasNextPage && (
-            <Link to={`/blog/page/${data.allMdx.pageInfo.currentPage + 1}/`}>
+            <Link
+              className="text-indigo-700"
+              to={`/blog/page/${data.allMdx.pageInfo.currentPage + 1}/`}
+            >
               Older posts →
             </Link>
           )}
