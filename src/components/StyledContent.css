@@ -40,6 +40,13 @@
   @apply list-disc;
   @apply pl-8;
 }
+.StyledContent ol {
+  @apply list-decimal;
+  @apply pl-8;
+}
+.StyledContent ol > li {
+  @apply pl-2;
+}
 .StyledContent li:not(:last-child) {
   @apply mb-2;
 }
