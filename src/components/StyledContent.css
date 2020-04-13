@@ -8,7 +8,8 @@
   @apply m-0;
 }
 .StyledContent p:not(:last-child),
-.StyledContent ul:not(:last-child) {
+.StyledContent ul:not(:last-child),
+.StyledContent ol:not(:last-child) {
   @apply mb-4;
 }
 .StyledContent a {
