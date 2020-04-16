@@ -21,7 +21,7 @@ export default function PostsList({ data }) {
             >
               {node.frontmatter.date}
             </time>
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="mb-2 text-3xl font-bold leading-tight text-gray-900">
               {node.frontmatter.title}
             </h2>
             <StyledContent>{node.excerpt}</StyledContent>

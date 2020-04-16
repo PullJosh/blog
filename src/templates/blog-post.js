@@ -20,7 +20,7 @@ export default function BlogPost({ data }) {
         >
           {data.mdx.frontmatter.date}
         </time>
-        <h2 className="text-3xl font-bold text-gray-900">
+        <h2 className="mb-2 text-3xl font-bold leading-tight text-gray-900">
           {data.mdx.frontmatter.title}
         </h2>
         <MDXProvider
