@@ -75,5 +75,5 @@ of computer usage.
 Despite existing for a long time, this area of software is woefully
 underexplored. There is a vast landscape of programmable formats yet to be
 discovered. These new tools will empower users to do more, and experience great
-success as a result. We haven't yet seen all the computers can do; that power
+success as a result. We haven't yet seen all that computers can do; that power
 will only be unlocked with users at the wheel.
