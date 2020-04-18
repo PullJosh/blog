@@ -12,7 +12,10 @@ import { StyledContent } from "../components/StyledContent";
 export default function BlogPost({ data }) {
   return (
     <Layout>
-      <SEO title={data.mdx.frontmatter.title} />
+      <SEO
+        title={data.mdx.frontmatter.title}
+        description={data.mdx.excerpt.split("\n").join("")}
+      />
       <article className="mb-8 ContentArea">
         <time
           className="text-gray-700"
@@ -123,6 +126,7 @@ export const query = graphql`
   query($slug: String!, $prevSlug: String, $nextSlug: String) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       body
+      excerpt(pruneLength: 160)
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
@@ -131,7 +135,7 @@ export const query = graphql`
       }
     }
     nextMdx: mdx(frontmatter: { slug: { eq: $nextSlug } }) {
-      excerpt(pruneLength: 65)
+      excerpt(pruneLength: 70)
       frontmatter {
         slug
         title
