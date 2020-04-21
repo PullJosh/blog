@@ -7,6 +7,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.8",
     "@mdx-js/react": "^1.5.8",
+    "canvas": "^2.6.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.20.10",
     "gatsby-plugin-feed": "^2.4.3",

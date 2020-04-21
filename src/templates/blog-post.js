@@ -15,6 +15,12 @@ export default function BlogPost({ data }) {
       <SEO
         title={data.mdx.frontmatter.title}
         description={data.mdx.excerpt.split("\n").join("")}
+        meta={[
+          {
+            name: `twitter:image`,
+            content: data.mdx.fields.socialImage.publicURL
+          }
+        ]}
       />
       <article className="mb-8 ContentArea">
         <time
@@ -132,6 +138,11 @@ export const query = graphql`
         date(formatString: "MMMM D, YYYY")
         machineDate: date
         author
+      }
+      fields {
+        socialImage {
+          publicURL
+        }
       }
     }
     nextMdx: mdx(frontmatter: { slug: { eq: $nextSlug } }) {

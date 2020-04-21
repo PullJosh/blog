@@ -1,4 +1,8 @@
-const { createFilePath } = require("gatsby-source-filesystem");
+const {
+  createFilePath,
+  createFileNodeFromBuffer
+} = require("gatsby-source-filesystem");
+const generateCardImage = require("./generateCardImage");
 
 exports.createPages = async function({ actions, graphql }) {
   const { data } = await graphql(`
@@ -50,8 +54,14 @@ exports.createPages = async function({ actions, graphql }) {
   }
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+exports.onCreateNode = async ({
+  node,
+  actions,
+  getNode,
+  createNodeId,
+  cache
+}) => {
+  const { createNodeField, createNode } = actions;
 
   if (node.internal.type === "Mdx") {
     const value = createFilePath({ node, getNode });
@@ -59,6 +69,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: node.frontmatter.slug,
       node,
       value
+    });
+
+    const socialCardImageCanvas = await generateCardImage(
+      node.frontmatter.title
+    );
+
+    const socialImageNode = await createFileNodeFromBuffer({
+      buffer: socialCardImageCanvas.toBuffer(),
+      name: "card",
+      createNode,
+      createNodeId,
+      cache
+    });
+
+    createNodeField({
+      name: "socialImage___NODE",
+      node,
+      value: socialImageNode.id
     });
   }
 };
