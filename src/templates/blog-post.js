@@ -18,7 +18,10 @@ export default function BlogPost({ data }) {
         meta={[
           {
             name: `twitter:image`,
-            content: data.mdx.fields.socialImage.publicURL
+            content: new URL(
+              data.mdx.fields.socialImage.publicURL,
+              data.site.siteMetadata.siteUrl
+            ).href
           }
         ]}
       />
@@ -163,6 +166,11 @@ export const query = graphql`
         date(formatString: "MMMM D, YYYY")
         machineDate: date
         author
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }
