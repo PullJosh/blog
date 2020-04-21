@@ -17,6 +17,10 @@ export default function BlogPost({ data }) {
         description={data.mdx.excerpt.split("\n").join("")}
         meta={[
           {
+            name: `twitter:card`,
+            content: `summary_large_image`
+          },
+          {
             name: `twitter:image`,
             content: new URL(
               data.mdx.fields.socialImage.publicURL,
